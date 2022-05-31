@@ -1,0 +1,49 @@
+---
+layout: default
+title: Home
+---
+
+<head>
+    <style>
+        body{
+            display: grid;
+            grid-auto-flow: column;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: auto;
+            grid-template-areas: 
+            "nav header header"
+            "nav header header";
+        }
+
+        nav{
+            grid-area: nav;
+        }
+
+        header{
+            grid-area: header;
+            text-align: center;
+        }
+    </style>
+</head>
+
+    <header>
+        <span>Hello, Greg!</span>
+
+
+    </header>
+
+    <nav>    
+        {% if page.url == "/" %}
+            <span>Current Page: Home</span>
+        {% endif %}
+
+        <div style="grid-row-start: 2">
+            {% for item in site.data.navigation %}
+                <a href = "{{ item.link }}">
+                 {{ item.name }}
+                </a>
+            {% endfor %}
+        </div>
+
+    </nav>
+

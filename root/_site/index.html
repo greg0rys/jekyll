@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title> Home</title>
+    </head>
+    <body>
+        <span> Thanks for visiting </span>
+        
+        <head>
+    <style>
+        body{
+            display: grid;
+            grid-auto-flow: column;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: auto;
+            grid-template-areas: 
+            "nav header header"
+            "nav header header";
+        }
+
+        nav{
+            grid-area: nav;
+        }
+
+        header{
+            grid-area: header;
+            text-align: center;
+        }
+    </style>
+</head>
+
+    <header>
+        <span>Hello, Greg!</span>
+
+
+    </header>
+
+    <nav>    
+        
+            <span>Current Page: Home</span>
+        
+
+        <div style="grid-row-start: 2">
+            
+                <a href = "/">
+                 Home
+                </a>
+            
+                <a href = "/about.html">
+                 About
+                </a>
+            
+                <a href = "/greg.html">
+                 Greg
+                </a>
+            
+        </div>
+
+    </nav>
+
+
+    </body>
+</html>
